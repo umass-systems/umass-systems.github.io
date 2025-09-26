@@ -1,205 +1,140 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UMass Systems Lunch for Students — Fall 2025</title>
-<meta name="description" content="A student-run seminar series for systems research at UMass CICS.">
-<style>
-:root {
-  --bg:#0b0c10; --fg:#e9ecf1; --muted:#aab2c0; --accent:#7dd3fc; --card:#101318;
-  --ok:#22c55e; --tent:#fbbf24; --link:#93c5fd; --border:#1f2530;
-}
-* { box-sizing: border-box; }
-html, body { margin:0; padding:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
-a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.container { max-width: 1000px; margin: 0 auto; padding: 24px; }
-.hero { padding: 64px 0 24px; display:flex; flex-direction:column; gap:18px; }
-h1 { font-size: clamp(28px, 3.6vw, 48px); line-height:1.15; margin:0; letter-spacing:-0.02em; }
-.subtitle { color:var(--muted); font-size: 1.05rem; }
-.kv { display:flex; flex-wrap:wrap; gap:12px 20px; color:var(--muted); }
-.kv span { padding:6px 10px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:999px; }
-.section-title { margin: 32px 0 12px; font-weight:600; color:#e6f1ff; letter-spacing:0.02em; }
-.schedule { display:flex; flex-direction:column; gap:14px; }
-.session { border:1px solid var(--border); background: var(--card); border-radius:16px; padding:16px; }
-.session-meta { display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding-bottom:10px; border-bottom:1px dashed var(--border); }
-.session-num { font-weight:700; color:var(--muted); letter-spacing:0.04em; text-transform:uppercase; font-size:0.8rem; }
-.date { font-weight:600; }
-.talks { list-style:none; padding:0; margin:12px 0 0; display:flex; flex-direction:column; gap:10px; }
-.talk { padding:10px 12px; border-radius:12px; border:1px solid var(--border); background: rgba(255,255,255,0.02); }
-.talk-top { display:flex; justify-content:space-between; align-items:center; gap:10px; }
-.speaker { font-weight:600; }
-.title { color:var(--fg); margin-top:4px; }
-.badge { font-size:0.75rem; padding:3px 8px; border-radius:10px; border:1px solid var(--border); }
-.badge.confirmed { background: rgba(34,197,94,0.12); color: #a7f3d0; border-color: rgba(34,197,94,0.35); }
-.badge.tentative { background: rgba(251,191,36,0.12); color: #fde68a; border-color: rgba(251,191,36,0.35); }
-.footer { margin: 36px 0 80px; color:var(--muted); font-size:0.95rem; }
-hr.sep { border:0; border-top:1px solid var(--border); margin:24px 0; }
-.small { font-size:0.9rem; color:var(--muted); }
-.btn { display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:rgba(255,255,255,0.03); }
-.btn:hover { background:rgba(255,255,255,0.06); }
-@media (prefers-color-scheme: light) {
-  :root { --bg:#ffffff; --fg:#0b1220; --muted:#5b6576; --card:#f7f8fb; --border:#e9edf3; }
-  .badge.confirmed { color:#065f46; background:#d1fae5; border-color:#a7f3d0; }
-  .badge.tentative { color:#92400e; background:#fef3c7; border-color:#fde68a; }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UMass Systems Lunch for Students</title>
+  <style>
+    body { margin:0; padding:0; background:#fff; color:#111; font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 28px 20px 64px; }
+    h1 { font-size: 28px; margin: 0 0 6px; }
+    p { margin: 8px 0; color: #444; }
+    a { color: #0645ad; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #f2f2f2; font-weight: 600; }
+    .section { margin-top: 28px; }
+    .small { color: #555; font-size: 0.95rem; }
+    hr { border:0; border-top:1px solid #ddd; margin: 24px 0; }
+    .footer { margin-top: 28px; color: #555; }
+    .kindred-list { margin: 0; padding-left: 20px; }
+    .kindred-list li { margin-bottom: 6px; }
+    @media (min-width: 768px) {
+      .kindred-list { columns: 2; column-gap: 32px; }
+      .kindred-list li { break-inside: avoid; }
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <header class="hero">
-      <h1>UMass Systems Lunch for Students — Fall 2025</h1>
-      <p class="subtitle">A student-led seminar where we share systems research, practice talks, and meet peers across labs.</p>
-      <div class="kv">
-        <span>Fridays @ noon</span>
-        <span>UMass CICS (room TBA)</span>
-        <span>Lunch provided (limited)</span>
-      </div>
-      <div>
-        <a class="btn" href="#schedule">Jump to schedule ↓</a>
-      </div>
-    </header>
+  <div class="wrap">
+    <h1>UMass Systems Lunch for Students</h1>
+    <p class="small">Thursday or Wednesday at noon • UMass CICS • Limited lunch provided</p>
 
-    <section id="about">
-      <h2 class="section-title">About</h2>
-      <p class="small">This series spotlights work across operating systems, distributed systems, databases, and related areas. Each session may feature one or two short talks (15–20 minutes each) followed by Q&amp;A.</p>
-    </section>
+    <p>The Systems Lunch for Students series aims to create a dedicated forum for PhD students in systems to: (1) share their research and receive constructive feedback in a supportive environment, (2) practice and refine their presentation skills ahead of conferences, and (3) build stronger cross-lab connections within CICS by learning about each other’s projects.</p>
 
-    <hr class="sep"/>
+    <p>Fellow students will share their research on building, debugging, testing, and maintaining:</p>
+    <ul>
+      <li>Operating systems</li>
+      <li>Distributed systems</li>
+      <li>Databases</li>
+      <li>Networking</li>
+      <li>Cloud computing</li>
+      <li>Systems for machine learning</li>
+      <li>Systems for big data processing</li>
+      <li>Sustainable systems</li>
+      <li>Virtualization and containerization technologies</li>
+    </ul>
 
-    <section id="schedule">
-      <h2 class="section-title">Schedule</h2>
-      <div class="schedule">
-        
-        <section class="session">
-            <div class="session-meta">
-                <div class="session-num">Session 0</div>
-                <div class="date">September 11, 2025</div>
-            </div>
-            <ul class="talks">
-                
-            <li class="talk confirmed">
-                <div class="talk-top">
-                    <span class="speaker">Kyla Levin</span>
-                    <span class="badge confirmed">Confirmed</span>
-                </div>
-                <div class="title">ChatDBG — debugging with the help of LLM</div>
-            </li>
-            
-            </ul>
-        </section>
-        
+    <div class="section" id="schedule">
+      <h2>Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th><th>Title</th><th>Speaker</th><th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>October 2, 2025</td>
+            <td>
+              <p>ChatDBG — debugging with the help of LLM</p>
+              <p>Sustainable systems</p>
+            </td>
+            <td>
+              <p>Kyla Levin</p>
+              <p>Diptyaroop Maji</p>
+            </td>
+            <td>A112</td>
+          </tr>
+          <tr>
+            <td>October 22, 2025</td>
+            <td>
+              <p>ML in Kernel: Learned kernel scheduling for provenance systems</p>
+              <p>Sustainable systems</p>
+            </td>
+            <td>
+              <p>Jinsong Mao</p>
+              <p>Walid A. Hanafy</p>
+            </td>
+            <td>CS150</td>
+          </tr>
+          <tr>
+            <td>November 13, 2025</td>
+            <td>
+              <p>Blackbox replication with flexible consistency</p>
+              <p>Vector DB</p>
+            </td>
+            <td>
+              <p>Fadhil Kurnia</p>
+              <p>Juelien Liu</p>
+            </td>
+            <td>CS150</td>
+          </tr>
+          <tr>
+            <td>December 4, 2025</td>
+            <td>
+              <p>TBD</p>
+              <p>TBD</p>
+            </td>
+            <td>
+              <p>Abhinav</p>
+              <p>Nicolas van Kempen</p>
+            </td>
+            <td>CS150</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        <section class="session">
-            <div class="session-meta">
-                <div class="session-num">Session 1</div>
-                <div class="date">October 2, 2025</div>
-            </div>
-            <ul class="talks">
-                
-            <li class="talk confirmed">
-                <div class="talk-top">
-                    <span class="speaker">Kyla Levin</span>
-                    <span class="badge confirmed">Confirmed</span>
-                </div>
-                <div class="title">ChatDBG — debugging with the help of LLM</div>
-            </li>
-            
+    <div class="section" id="kindred">
+      <h2>Kindred spirits</h2>
+      <ul class="kindred-list">
+        <li><a href="https://southbaysystems.xyz/">South Bay Systems</a></li>
+        <li><a href="https://www.sfsystemsclub.com/">San Francisco Systems Club</a></li>
+        <li><a href="https://vancouver.systems/">Vancouver Systems</a></li>
+        <li><a href="https://nycsystems.xyz/">NYC Systems</a></li>
+        <li><a href="https://dcsystems.xyz/">DC Systems</a></li>
+        <li><a href="https://munichdatabases.xyz/">Munich Database Meetup</a></li>
+        <li><a href="https://berlinsystems.xyz/">Berlin Systems Group</a></li>
+        <li><a href="https://helsystems.xyz/">Systems from HEL</a></li>
+        <li><a href="https://twitter.com/BengaluruSys">Bengaluru Systems Meetup</a></li>
+        <li><a href="https://seattlesystems.xyz/">Seattle Systems</a></li>
+        <li><a href="https://madisonsystems.xyz/">Madison Systems</a></li>
+      </ul>
+    </div>
 
-            <li class="talk confirmed">
-                <div class="talk-top">
-                    <span class="speaker">Diptyaroop Maji</span>
-                    <span class="badge confirmed">Confirmed</span>
-                </div>
-                <div class="title">Sustainable systems</div>
-            </li>
-            
-            </ul>
-        </section>
-        
+    <div class="section" id="brought">
+      <h2>Brought to you by</h2>
+      <p class="small"><a href="https://nvankempen.com/">Nicolas</a>, <a href="https://fadhil.id">Fadhil</a></p>
+      <p class="small">Please reach out to us if you want to help organize the series 😄</p>
+    </div>
 
-        <section class="session">
-            <div class="session-meta">
-                <div class="session-num">Session 2</div>
-                <div class="date">October 23, 2025</div>
-            </div>
-            <ul class="talks">
-                
-            <li class="talk confirmed">
-                <div class="talk-top">
-                    <span class="speaker">Jinsong Mao</span>
-                    <span class="badge confirmed">Confirmed</span>
-                </div>
-                <div class="title">ML in Kernel: Learned kernel scheduling for provenance systems</div>
-            </li>
-            
-            </ul>
-        </section>
-        
-
-        <section class="session">
-            <div class="session-meta">
-                <div class="session-num">Session 3</div>
-                <div class="date">November 13, 2025</div>
-            </div>
-            <ul class="talks">
-                
-            <li class="talk confirmed">
-                <div class="talk-top">
-                    <span class="speaker">Fadhil Kurnia</span>
-                    <span class="badge confirmed">Confirmed</span>
-                </div>
-                <div class="title">Blackbox replication w/ flexible consistency</div>
-            </li>
-            
-
-            <li class="talk confirmed">
-                <div class="talk-top">
-                    <span class="speaker">Juelien Liu</span>
-                    <span class="badge confirmed">Confirmed</span>
-                </div>
-                <div class="title">Parallelism with GPUs / vector DB</div>
-            </li>
-            
-            </ul>
-        </section>
-        
-
-        <section class="session">
-            <div class="session-meta">
-                <div class="session-num">Session 4</div>
-                <div class="date">December 4, 2025</div>
-            </div>
-            <ul class="talks">
-                
-            <li class="talk tentative">
-                <div class="talk-top">
-                    <span class="speaker">Abhinav (?)</span>
-                    <span class="badge tentative">Tentative</span>
-                </div>
-                <div class="title"><em>TBA</em></div>
-            </li>
-            
-
-            <li class="talk tentative">
-                <div class="talk-top">
-                    <span class="speaker">Nicolas (?)</span>
-                    <span class="badge tentative">Tentative</span>
-                </div>
-                <div class="title">Energy usage of programming languages</div>
-            </li>
-            
-            </ul>
-        </section>
-        
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>Questions or want to speak? Contact the organizers.</p>
-      <p class="small">© 2025 UMass Systems Lunch for Students.</p>
-    </footer>
+    <hr>
+    <div class="footer">
+      © 2025 UMass Systems Lunch for Students.
+    </div>
   </div>
 </body>
 </html>
